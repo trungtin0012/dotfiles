@@ -135,5 +135,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export VISUAL=vim
 
-############My customize
+############
+# My customize
 
