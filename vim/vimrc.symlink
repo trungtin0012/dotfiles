@@ -1,0 +1,38 @@
+set number
+set relativenumber
+set clipboard=unnamed
+
+set tags=.git/tags; " project-specific tags for ctags
+"Vim plugin
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plug 'kien/ctrlp.vim' " fuzzy find files
+Plug 'Yggdroot/indentLine' " displaying thin vertical lines at each indentation level 
+
+call plug#end()
+" End Plugin
+
+
+set autoread " detect when a file is changed
+
+" map
+
+" Searching
+set ignorecase " case insensitive searching
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=0
+" show hidden files in NERDTree
+let NERDTreeShowHidden=1
+" Toggle NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
+
+" indentLine
+"set list lcs=tab:\|\ "set vertical lines for for code indented with space
+let g:indentLine_char = '¦'
+
+"test
