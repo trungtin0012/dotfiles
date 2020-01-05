@@ -133,7 +133,10 @@ if [ -f '/Users/nguyentrungtin/Downloads/google-cloud-sdk/completion.zsh.inc' ];
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+#use vim in shell
 export VISUAL=vim
+export EDITOR="$VISUAL"
+set -o vi
 
 ############
 # My customize
