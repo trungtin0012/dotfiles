@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+DEFAULT_USER=`whoami`
 #Flutter SDK
 #export PATH=~/Development/flutterSDK/flutter/bin:$PATH
 #JAVA 8
@@ -122,6 +123,7 @@ alias d="cd ~/Development"
 alias cls=clear
 alias vsc="code ."
 alias vim=/usr/local/bin/vim
+alias files_count="ls -cr | wc -l"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nguyentrungtin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nguyentrungtin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -134,9 +136,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 #use vim in shell
-export VISUAL=vim
-export EDITOR="$VISUAL"
+#export VISUAL=vim
+#export EDITOR="$VISUAL"
 set -o vi
+# Use Ctrl+r to search backward
+bindkey "^R" history-incremental-search-backward
 
 ############
 # My customize
