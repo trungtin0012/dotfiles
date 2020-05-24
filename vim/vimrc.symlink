@@ -17,6 +17,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plug 'kien/ctrlp.vim' " fuzzy find files
 Plug 'Yggdroot/indentLine' " displaying thin vertical lines at each indentation level 
+Plug 'dart-lang/dart-vim-plugin' "flutter pluggin https://github.com/dart-lang/dart-vim-plugin
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 
 call plug#end()
 " End Plugin
@@ -37,10 +40,13 @@ let g:NERDTreeQuitOnOpen=0
 " show hidden files in NERDTree
 let NERDTreeShowHidden=1
 " Toggle NERDTree
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-b> :NERDTreeFocus<CR>
 
 " indentLine
 "set list lcs=tab:\|\ "set vertical lines for for code indented with space
 let g:indentLine_char = '¦'
+
+" you apply all defaults keymaps of vim-lsc
+let g:lsc_auto_map = v:true
 
 "test

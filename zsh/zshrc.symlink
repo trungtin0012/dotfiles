@@ -119,7 +119,6 @@ alias tmuxconfig="vim ~/.tmux.conf"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
  
 # alias
-alias d="cd ~/Development"
 alias cls=clear
 alias vsc="code ."
 alias vim=/usr/local/bin/vim
@@ -144,4 +143,5 @@ bindkey "^R" history-incremental-search-backward
 
 ############
 # My customize
-
+alias d="cd ~/Development"
+alias frc="flutter run -d Chrome"
