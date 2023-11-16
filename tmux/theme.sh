@@ -45,8 +45,13 @@ set-option -g display-panes-colour $base01
 # clock
 set-window-option -g clock-mode-colour $base0C
 
+#git branch
+tm_git_branch="#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)"
+
+#session name
 tm_session_name="#[default,bg=$base00,fg=$base0E] #S "
-set -g status-left "$tm_session_name"
+
+set -g status-left "$tm_session_name $tm_git_branch"
 
 tm_tunes="#[bg=$base00,fg=$base0D] ♫ #(osascript -l JavaScript ~/.dotfiles/applescripts/tunes.js)"
 # tm_tunes="#[fg=$tm_color_music]#(osascript ~/.dotfiles/applescripts/tunes.scpt | cut -c 1-50)"
