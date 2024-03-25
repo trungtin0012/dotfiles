@@ -8,6 +8,10 @@ echo "Installing dotfiles."
 
 source install/link.sh
 
+#Clone tmux tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
 if test ! "$( command -v brew )"; then
     echo "Installing homebrew"
     ruby -e "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )"
@@ -20,6 +24,10 @@ brew bundle
 echo -e "\\n\\nRunning fzf install script..."
 echo "=============================="
 /usr/local/opt/fzf/install --all --no-bash --no-fish
+# install fzf via github
+#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+#~/.fzf/install
+
 
 # Change the default shell to zsh
 zsh_path="$( command -v zsh )"

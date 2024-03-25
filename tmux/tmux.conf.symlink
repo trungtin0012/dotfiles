@@ -66,7 +66,7 @@ setw -g mouse on
 ##############################
 ### Color & Style Settings ###
 ##############################
-source ~/.dotfiles/tmux/theme.sh
+source ~/.dotfiles/tmux/custom.theme
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
@@ -79,12 +79,12 @@ set -g @plugin 'soyuka/tmux-current-pane-hostname'
 #Theme
 
 # Custom theme
-set -g status-left '#[bg=colour54] #{pane_current_path} #(gitmux -cfg $HOME/.gitmux.conf "#{pane_current_path}")'
-set -g status-left-length 100
-set -g status-right '#[fg=cyan,bold] #H #[bg=colour79] %Y-%m-%d %H:%M'
-set -g status-right-length 100
-set -g status-style fg=white,bg=black
-set -g status-justify centre
+# set -g status-left '#[bg=colour54] #{pane_current_path} #(gitmux -cfg $HOME/.gitmux.conf "#{pane_current_path}")'
+# set -g status-left-length 100
+# set -g status-right '#[fg=cyan,bold] #H #[bg=colour79] %Y-%m-%d %H:%M'
+# set -g status-right-length 100
+# set -g status-style fg=white,bg=black
+# set -g status-justify centre
 
 #Plugin config
 set -g @yank_selection_mouse 'clipboard'
